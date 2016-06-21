@@ -4,7 +4,7 @@ javalang
 ========
 
 javalang is a pure Python library for working with Java source
-code. javalang provides a lexer and parser targeting Java 7. The
+code. javalang provides a lexer and parser targeting Java 7. and It is unstable version of java 8. The
 implementation is based on the Java language spec available at
 http://docs.oracle.com/javase/specs/jls/se7/html/.
 
