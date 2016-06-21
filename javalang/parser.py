@@ -2116,7 +2116,6 @@ class Parser(object):
         if self.try_accept('[', ']'):
             array_dimension = [None] + self.parse_array_dimension()
             self.try_accept('.', 'class')
-            ### iiii
             return tree.ClassReference(type=tree.Type(dimensions=array_dimension))
 
         elif self.would_accept('('):
@@ -2247,6 +2246,8 @@ class Parser(object):
                     body_declarations.append(declaration)
 
         self.accept('}')
+        while(self.try_accept(';')):
+            pass
 
         return tree.EnumBody(constants=constants,
                              declarations=body_declarations)
